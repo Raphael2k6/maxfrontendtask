@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Dashboard.module.css'
 import DashboardComponent from '../../component/DashboardComponent/DashboardComponent';
 import { sidemenuData } from '../../Utils/data';
 import logo from '../../Utils/assets/Starwarslogo.png';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilms } from '../../reduxstore/starWarsReducer/actions';
 
 const Dashboard = () => {
-    const [data, setData] = useState(null);
     const dispatch = useDispatch();
     const films = useSelector(state => state.starwars.films)
 

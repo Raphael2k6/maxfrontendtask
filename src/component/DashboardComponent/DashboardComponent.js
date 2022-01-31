@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import icon from '../../Utils/assets/shopping-basket.png'
 import icon2 from '../../Utils/assets/logo2.png'
 import styles from './DashboardComponent.module.css';
