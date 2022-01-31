@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import loginImg from '../../Utils/assets/undraw_To_the_stars_qhyy.png';
 import loginImgB from '../../Utils/assets/undraw_Astronaut_xko2.png';
 import styles from './Login.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import AuthContext from '../../store/auth'
 
 
@@ -10,7 +10,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // const [isLoggedIn, setisLoggedIn] = useState(false)
-    const history = useNavigate();
+    const history = useHistory();
     const authCxt = useContext(AuthContext);
 
     const emailInputHandler = (event) => {
@@ -46,7 +46,7 @@ const Login = () => {
         event.preventDefault();
         authCxt.login()
         if(authCxt.isLoggedIn) {
-            history("/dashboard")
+            history.push("/dashboard")
         }
     }
 
