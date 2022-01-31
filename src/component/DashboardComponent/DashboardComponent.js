@@ -22,8 +22,7 @@ const cards = DashboardCards.map(card => {
 })
 
 const DashboardComponent = ({ data }) => {
-  console.log("dashcomponent",data)
-  const tableInfo = data.length > 0 && data.map((datum) => {
+  const tableInfo = data.map((datum) => {
     return (
       <div className={styles.table__information__option} key={datum.title}>
         <div>{datum.title} </div>

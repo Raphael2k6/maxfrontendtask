@@ -1,7 +1,7 @@
 import { GET_FILMS } from "./constants";
 
 const initialState = {
-    films: null,
+    films: [],
 }
 
 const filmReducer = (state = initialState, action) => {
