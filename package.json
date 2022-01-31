@@ -2,6 +2,7 @@
   "name": "maxfrontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thirsty-lovelace-c095f8.netlify.app",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
