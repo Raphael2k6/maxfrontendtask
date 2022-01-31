@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import icon from '../../Utils/assets/shopping-basket.png'
 import icon2 from '../../Utils/assets/logo2.png'
 import styles from './DashboardComponent.module.css';
@@ -22,7 +22,8 @@ const cards = DashboardCards.map(card => {
 })
 
 const DashboardComponent = ({ data }) => {
-  const tableInfo = data.map((datum) => {
+const [tableData, setTableData] = useState(data);
+  const tableInfo = tableData && tableData.map((datum) => {
     return (
       <div className={styles.table__information__option} key={datum.title}>
         <div>{datum.title} </div>
