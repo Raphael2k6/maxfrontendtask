@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+.dashboardHolder {
+    background: rgba(246, 246, 246, 1) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100%;
+}
+
+.content {
+    width: 288px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box;
+    border: 0.4000000059604645px solid rgba(219, 227, 238, 1);
+}
+.logo {
+    margin: 3rem 4rem 4rem 2rem;
+}
+.items {
+    display: flex;
+    margin: 1rem 0rem 1rem 2rem;
+    align-items: center;
+}
+.items img {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 540px) {
+    .content {
+        display: none;
+    }
+}

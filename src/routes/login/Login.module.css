@@ -1,0 +1,88 @@
+.login {
+    display: flex;
+    width: 100%;
+}
+
+.login_background {
+    width: 35%;
+    background: rgba(255, 246, 211, 0.45) 0% 0% no-repeat padding-box;
+    height: 100vh;
+}
+.login_background h1 {
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: #001A03;
+    margin: 348px 116px 87px;
+}
+.login_background img {
+    margin: 0px 119.12px 208.98px 52px;
+    max-width: 100%;
+}
+.login_form {
+    width: 65%;
+}
+.login_formImage {
+    display: flex;
+    justify-content: flex-end;
+    margin: 45.89px 38px 0px 0px;
+}
+
+.formHolder {
+    margin:5% 15%;
+}
+.formHolder h3 {
+    width: 262px;
+    height: 68px;
+    letter-spacing: 0px;
+    color: rgba(43, 45, 66, 1);
+    font-size: 24px;
+}
+label {
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: rgba(43, 45, 66, 1);
+}
+input {
+    background: rgba(250, 250, 250, 1) 0% 0% no-repeat padding-box;
+    border: 1px solid rgba(141, 153, 174, 1);
+    border-radius: 4px;
+    width: 350px;
+    height: 48px;
+    margin: 0.4rem 0rem 1.8rem 0rem;
+}
+button {
+    width: 358px;
+    height: 48px;
+    background: rgba(31, 31, 33, 1) 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+.disabled {
+    background-color: #868383;
+}
+
+.footer {
+    display: flex;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: rgba(133, 155, 188, 0.96);
+    opacity: 1;
+    margin: 18rem 0rem 0rem 1.5rem;
+}
+div.footer> div:first-child {
+    margin-right: 17%;
+}
+div.footer> div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+.space {
+    margin-right: 2rem;
+}
+
+@media screen and (max-width: 540px) {
+    .login_background {
+        display: none;
+    }
+}
