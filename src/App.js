@@ -9,7 +9,7 @@ function App() {
     <Fragment>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route exact path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
