@@ -3,6 +3,7 @@ import icon from '../../Utils/assets/shopping-basket.png'
 import icon2 from '../../Utils/assets/logo2.png'
 import styles from './DashboardComponent.module.css';
 import { DashboardCards } from '../../Utils/data'
+import Icon from '../../Utils/Icons/stock/landingPageImg';
 
 
 
@@ -43,6 +44,7 @@ const [tableData, setTableData] = useState(data);
           <div><p>Dashboard</p></div>
           <div className={styles.navIcons}>
             <div><img src={icon} alt='icons' /></div>
+            <div><Icon name="landingPageImg" /></div>
             <div><img src={icon} alt='icons' /></div>
             <div className={styles.spacing}><img src={icon2} alt='icons' /></div>
           </div>

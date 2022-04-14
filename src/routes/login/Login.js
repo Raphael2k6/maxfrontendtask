@@ -26,9 +26,6 @@ const Login = () => {
         return isEmailValid;
     };
 
-
-
-
     const usePasswordValidation = (password) => {
         if (!password || password.length === 0) {
             return;
@@ -44,10 +41,10 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        authCxt.login()
-        if(authCxt.isLoggedIn) {
-            history.push("/dashboard")
+        if (authCxt.isLoggedIn === false){
+             authCxt.login()
         }
+            history.push("/dashboard")
     }
 
     return (
@@ -64,7 +61,7 @@ const Login = () => {
                     <div className={styles.formHolder}>
                         <h3>Sign in to continue to your account.</h3>
                         <div className={styles.form}>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <label htmlFor="Email address">Email Address</label> <br />
                                 <input
                                     type='email'
@@ -83,7 +80,7 @@ const Login = () => {
                                     type='submit' 
                                     disabled={!isFormValid} 
                                     className={!isFormValid ? styles.disabled : ""} 
-                                    onClick={handleSubmit}>Sign in
+                                   >Sign in
                                 </button>
                             </form>
                         </div>
