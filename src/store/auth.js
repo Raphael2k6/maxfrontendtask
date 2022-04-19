@@ -1,15 +1,15 @@
 import React, {useState} from "react";
-
+const isLoggedIn = false
 const AuthContext = React.createContext({
-    isLoggedIn: false,
+    isLoggedIn,
     login: () => {},
 });
 
 export const AuthContextProvider = (props) => {
-    const[login, setLogin] = useState(false)
+    const[login, setLogin] = useState(isLoggedIn)
 
-    const loginHandler = () => {
-       setLogin(true);    
+    const loginHandler = async () => {
+       setLogin(!isLoggedIn);    
     }
 
     const contextValue = {

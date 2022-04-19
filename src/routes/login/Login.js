@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import loginImg from '../../Utils/assets/undraw_To_the_stars_qhyy.png';
 import loginImgB from '../../Utils/assets/undraw_Astronaut_xko2.png';
 import styles from './Login.module.css';
@@ -12,6 +12,12 @@ const Login = () => {
     // const [isLoggedIn, setisLoggedIn] = useState(false)
     const history = useHistory();
     const authCxt = useContext(AuthContext);
+
+    useEffect(() => {
+        if (authCxt.isLoggedIn === true) {
+            history.push("/dashboard")
+        }
+    });
 
     const emailInputHandler = (event) => {
         setEmail(event.target.value)
@@ -41,10 +47,9 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (authCxt.isLoggedIn === false){
-             authCxt.login()
+        if (authCxt.isLoggedIn === false) {
+            authCxt.login()
         }
-            history.push("/dashboard")
     }
 
     return (
